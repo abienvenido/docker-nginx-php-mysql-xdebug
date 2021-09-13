@@ -1,5 +1,5 @@
-.vscode/*
-logs/nginx/*
-logs/php-fpm/*
-logs/xdebug/*
-mysqldb/*
+.vscode
+logs/nginx
+logs/php-fpm
+logs/xdebug
+mysqldb
