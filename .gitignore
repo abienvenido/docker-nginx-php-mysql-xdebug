@@ -1,3 +1,5 @@
 .vscode/
-logs/
+logs/nginx/
+logs/php-fpm/
+logs/xdebug/
 mysqldb/
