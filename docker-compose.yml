@@ -9,10 +9,10 @@ services:
       - SYS_NICE # CAP_SYS_NICE
     environment:
       LANG: es_ES.UTF-8
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: nameproject
-      MYSQL_USER: user
-      MYSQL_PASSWORD: p@ssw0rd
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
     ports:
       - "8844:3306"
     volumes:
