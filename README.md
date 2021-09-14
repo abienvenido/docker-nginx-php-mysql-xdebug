@@ -91,7 +91,7 @@ To see the debug log, un-comment the `xdebug.remote_log` setting in the config f
 
 ## Other
 ---
-
+<!--  -->
 Sample debug configuration for *VS Code* (using the default settings):
 
 ```json
