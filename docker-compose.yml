@@ -3,16 +3,17 @@ version: "2"
 services:
   mysqlDB:
     image: mysql:8.0.22
-    container_name: mysqlDB
-    hostname: mysqlDB
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    container_name: ${CONTAINER_NAME}
+    hostname: ${HOSTNAME}
     cap_add:
       - SYS_NICE # CAP_SYS_NICE
     environment:
       LANG: es_ES.UTF-8
-      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "8844:3306"
     volumes:
@@ -38,6 +39,7 @@ services:
     hostname: memcached
     expose:
       - 11211
+      
   web:
     image: nginx:latest
     ports:

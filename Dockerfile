@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8-fpm
 
 RUN apt-get update -y && apt-get install iputils-ping -y
 
@@ -12,7 +12,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Install OS dependencies
 RUN set -ex; \
         apt-get update && \
-        DEBIAN_FRONTEND=noninteractive \
+        DEBIAN_FRONTEND=noninteractive \ 
         apt-get install --no-install-recommends -y \
         \
         libldap2-dev \
